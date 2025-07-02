@@ -1,0 +1,22 @@
+server:
+  port: 8013
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdb?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
+    username: tester
+    password: tesTer123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+
+logging:
+  level:
+    org.hibernate.type.descriptor.sql: trace
